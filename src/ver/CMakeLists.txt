@@ -2,7 +2,11 @@
 # Copyright (C) 2020  Igara Studio S.A.
 
 # Version of Aseprite
-set(VERSION "1.x-dev")
+if(DEFINED ENV{APP_VERSION})
+  set(VERSION $ENV{APP_VERSION})
+else()
+  set(VERSION "1.x-dev") # Default version
+endif()
 
 configure_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/generated_version.h.in"
