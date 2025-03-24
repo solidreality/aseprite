@@ -1,4 +1,4 @@
-name: pre-commit
+name: Code Check Pre Commit
 on: [pull_request]
 jobs:
   precommit:
